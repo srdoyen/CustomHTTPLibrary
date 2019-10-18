@@ -1,10 +1,13 @@
-const http = new easyHTTP;
+const http = new easyHTTP();
 
-// Get Posts
-http.get('https://jsonplaceholder.typicode.com/posts', function(err, posts) {
-  if(err) {
-    console.log(err);
+//GET Posts
+const posts = http.get("https://jsonplaceholder.typicode.com/posts", function(
+  error,
+  response
+) {
+  if (error) {
+    console.log(error);
   } else {
-    console.log(posts);
+    console.log(response);
   }
 });
