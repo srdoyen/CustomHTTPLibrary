@@ -1,77 +1,29 @@
-const http = new easyHTTP();
+const http = new EasyHTTP();
 
-//GET Posts
-// const posts = http.get("https://jsonplaceholder.typicode.com/posts", function(
-//   error,
-//   response
-// ) {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log(response);
-//   }
-// });
+//Get Users
+//http.get("https://jsonplaceholder.typicode.com/users").then(data => console.log(data)).catch(err=>console.log(err))
 
-//GET Single Post
-// const posts = http.get("https://jsonplaceholder.typicode.com/posts/1", function(
-//   error,
-//   response
-// ) {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log(response);
-//   }
-// });
+//user data
+const data = {
+  name: "John Doe",
+  username: "johndoe",
+  email: "jdoe@gmail.com"
+};
 
-//POST Posts
-//Create data
-const data = { title: "Custom Post", body: "This is custom" };
+//Create post
+// http
+// .post("https://jsonplaceholder.typicode.com/users", data)
+// .then(data => console.log(data))
+// .catch(err => console.log(err));
 
-// http.post("https://jsonplaceholder.typicode.com/posts", data, function(
-//   error,
-//   response
-// ) {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log(response);
-//   }
-// });
+//Update Post
+// http
+//   .put("https://jsonplaceholder.typicode.com/users/2", data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
 
-//PUT Posts
-//Create data
-
-// http.post("https://jsonplaceholder.typicode.com/posts", data, function(
-//   error,
-//   response
-// ) {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log(response);
-//   }
-// });
-
-//Update POST
-// http.put("https://jsonplaceholder.typicode.com/posts/1", data, function(
-//   err,
-//   post
-// ) {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log(post);
-//   }
-// });
-
-http.delete("https://jsonplaceholder.typicode.com/posts/1", function(
-  err,
-  response
-) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(response);
-  }
-});
+//Delete
+// http
+//   .delete("https://jsonplaceholder.typicode.com/users/2", data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
